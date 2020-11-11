@@ -4,7 +4,7 @@ Jogo do tipo Space Shooter(jogo de navinha)
 ---
 ## Jogo Space Shooter
 ### Lista de tasks
-- [ X ] Importar os assets
+- [X] Importar os assets
 - [ ] Player
 - [ ] Movimentação básica
 - [ ] Atirar projétil
