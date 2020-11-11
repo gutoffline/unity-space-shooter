@@ -5,11 +5,11 @@ Jogo do tipo Space Shooter(jogo de navinha)
 ## Jogo Space Shooter
 ### Lista de tasks
 - [X] Importar os assets
-- [ ] Player
-- [ ] Movimentação básica
+- [X] Player
+- [X] Movimentação básica
 - [ ] Atirar projétil
 - [ ] Destruir inimigos
-- [ ] Cenário / Background
+- [X] Cenário / Background
 - [ ] Colisão com inimigos
 - [ ] Morrer
 - [ ] Pontuação
@@ -43,3 +43,9 @@ No arquivo do projeto ***.vscode/settings.json***, antes da linha `"files.exclud
 - Unity Code Snippets - Kleber Silva
 - Unity Tools - Tobiah Zarlez
 - Debugger for Unity - Unity Technologies
+
+<br><br>
+
+## Sprites
+[Warped Space Shooter](
+https://assetstore.unity.com/packages/2d/characters/warped-space-shooter-181590)
