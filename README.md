@@ -5,16 +5,17 @@ Jogo do tipo Space Shooter(jogo de navinha)
 ## Jogo Space Shooter
 ### Lista de tasks
 - [X] Importar os assets
+- [X] Cenário / Background
 - [X] Player
 - [X] Movimentação básica
-- [ ] Atirar projétil
+- [X] Atirar projétil
+- [X] Inimigo
 - [ ] Destruir inimigos
-- [X] Cenário / Background
 - [ ] Colisão com inimigos
 - [ ] Morrer
 - [ ] Pontuação
 - [ ] Som
-- [ ] Animação
+- [ ] Animação da moviemntação do player
 - [ ] UI (User Interface ou Interface do Usuário)
 
 <br>

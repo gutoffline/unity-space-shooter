@@ -6,6 +6,7 @@ public class Jogador : MonoBehaviour
 {
     public float velocidade = 2f;
     public BoxCollider2D areaJogo;
+    public GameObject projetilPrefab;
     void Start()
     {
         print(areaJogo.bounds.extents);
@@ -14,23 +15,22 @@ public class Jogador : MonoBehaviour
 
     void Update()
     {
+        Atirar();
+        Movimentar();
+        AplicarAreaJogo();
+    }
 
+    private void Atirar()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projetilPrefab, transform.position, transform.rotation);
 
-        //MOVIMENTAÇÃO DO JOGADOR
+        }
+    }
 
-
-        // Input vertical
-        // Recebe 0 quando nao esta apertado
-        // 1 quando esta apertador para cima
-        // -1 quando apertado para baixo
-
-        var vertical = Input.GetAxis("Vertical");
-        transform.Translate(Vector2.up * vertical * velocidade * Time.deltaTime);
-        var horizontal = Input.GetAxis("Horizontal");
-        transform.Translate(Vector2.right * horizontal * velocidade * Time.deltaTime);
-
-
-
+    private void AplicarAreaJogo()
+    {
         // Garantir que o jogador ficará dentro da área do jogo
         var position = areaJogo.transform.position;
         var extents = areaJogo.bounds.extents;
@@ -46,5 +46,19 @@ public class Jogador : MonoBehaviour
             Mathf.Clamp(transform.position.x, limiteXMin, limiteXMax),
             Mathf.Clamp(transform.position.y, limiteYMin, limiteYMax)
         );
+    }
+
+    private void Movimentar()
+    {
+        //MOVIMENTAÇÃO DO JOGADOR
+
+        // Input vertical
+        // Recebe 0 quando nao esta apertado
+        // 1 quando esta apertador para cima
+        // -1 quando apertado para baixo
+
+        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxis("Horizontal");
+        transform.Translate(new Vector2(horizontal, vertical) * velocidade * Time.deltaTime);
     }
 }

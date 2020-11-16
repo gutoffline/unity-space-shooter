@@ -508,7 +508,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -538,6 +538,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &777146240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777146241}
+  - component: {fileID: 777146242}
+  m_Layer: 0
+  m_Name: GeradorInimigos
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777146241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777146240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.429, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777146242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777146240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d627180ce15d04c9ba33f6bc6fb220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inimigoPrefab: {fileID: 3167539943871314172, guid: 8ea97d6043580f7498eb2f4b8ccf599a,
+    type: 3}
+  delayGerarInimigos: 2
+  posicaoYInimigoAleatoria: 0.9
 --- !u!1 &1054193378
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 2
   areaJogo: {fileID: 689548198}
+  projetilPrefab: {fileID: 6658249140886975845, guid: a075f391f3b5f9d4e8747b2f2808e4fb,
+    type: 3}
 --- !u!1 &1897608099
 GameObject:
   m_ObjectHideFlags: 0
