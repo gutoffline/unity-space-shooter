@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jogador : MonoBehaviour
 {
     public float velocidade = 2f;
     public BoxCollider2D areaJogo;
     public GameObject projetilPrefab;
+    public Text pontosText;
+    public int pontos;
+
     void Start()
     {
         print(areaJogo.bounds.extents);
@@ -18,6 +22,12 @@ public class Jogador : MonoBehaviour
         Atirar();
         Movimentar();
         AplicarAreaJogo();
+    }
+
+    public void AdicionarPontos()
+    {
+        pontos += 1;
+        pontosText.text = "Pontos: " + pontos.ToString("D6");
     }
 
     private void Atirar()
